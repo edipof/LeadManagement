@@ -1,0 +1,71 @@
+<div class="lead-card">
+  <div class="lead-header">
+    <div class="lead-avatar">
+      {{ lead?.firstName?.charAt(0) }}{{ lead?.lastName?.charAt(0) }}
+    </div>
+    <div class="lead-info">
+      <div class="lead-name">{{ lead?.firstName }} {{ lead?.lastName }}</div>
+      <div class="lead-date">
+        {{
+          lead?.dateCreated
+            ? (lead?.dateCreated | date : "MMMM d, y 'at' h:mm a")
+            : "No date"
+        }}
+      </div>
+    </div>
+  </div>
+
+  <hr class="separator" />
+
+  <div class="lead-details">
+    <div class="lead-address">
+      <i class="fa fa-map-marker-alt"></i>
+      <span>{{ lead?.suburb }}</span>
+    </div>
+    <div class="lead-job">
+      <i class="fa fa-briefcase"></i>
+      <span>{{ lead?.jobTitle }}</span>
+    </div>
+    <div class="lead-job-id">
+      <span><strong>Job ID:</strong> {{ lead?.jobId }}</span>
+    </div>
+
+    <div *ngIf="activeTab === 'accepted'" class="lead-price">
+      <span>{{ lead?.price | currency }} Lead Invitation</span>
+    </div>
+  </div>
+
+  <div *ngIf="activeTab === 'accepted'" class="lead-contact">
+    <div class="lead-phone">
+      <i class="fa fa-phone"></i>
+      <span>{{ lead?.phoneNumber }}</span>
+    </div>
+    <div class="lead-email">
+      <i class="fa fa-envelope"></i>
+      <span>{{ lead?.email }}</span>
+    </div>
+  </div>
+
+  <p class="lead-description">{{ lead?.description }}</p>
+
+  <div *ngIf="activeTab === 'invited'" class="lead-actions">
+    <button
+      class="accept-btn"
+      (click)="acceptLead(lead?.id!)"
+      [disabled]="isLoading"
+    >
+      {{ isLoading ? "The system is processing the data...." : "Accept" }}
+    </button>
+    <button
+      class="decline-btn"
+      (click)="declineLead(lead?.id!)"
+      [disabled]="isLoading"
+    >
+      {{ isLoading ? "The system is processing the data...." : "Decline" }}
+    </button>
+
+    <div class="lead-price-right">
+      <span>{{ lead?.price | currency }} Lead Invitation</span>
+    </div>
+  </div>
+</div>

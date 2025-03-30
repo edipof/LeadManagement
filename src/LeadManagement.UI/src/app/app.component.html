@@ -1,0 +1,39 @@
+<div class="tabs-container">
+  <div class="tabs">
+    <button
+      class="tab-button"
+      [class.active]="activeTab === 'invited'"
+      (click)="switchTab('invited')"
+    >
+      Invited
+    </button>
+    <button
+      class="tab-button"
+      [class.active]="activeTab === 'accepted'"
+      (click)="switchTab('accepted')"
+    >
+      Accepted
+    </button>
+  </div>
+
+  <div class="tab-content">
+    <div *ngIf="activeTab === 'invited'">
+      <app-lead-card
+        *ngFor="let lead of invitedLeads"
+        [lead]="lead"
+        [activeTab]="activeTab"
+        (leadAccepted)="onLeadAccepted($event)"
+        (leadDeclined)="onLeadDeclined($event)"
+      ></app-lead-card>
+    </div>
+    <div *ngIf="activeTab === 'accepted'">
+      <app-lead-card
+        *ngFor="let lead of acceptedLeads"
+        [lead]="lead"
+        [activeTab]="activeTab"
+      >
+        ></app-lead-card
+      >
+    </div>
+  </div>
+</div>

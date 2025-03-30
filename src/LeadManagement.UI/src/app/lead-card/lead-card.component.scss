@@ -1,0 +1,154 @@
+.lead-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.lead-card:hover {
+    transform: translateY(-3px);
+}
+
+.lead-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.lead-avatar {
+    width: 48px;
+    height: 48px;
+    background-color: #ff9800;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.lead-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.lead-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.lead-date {
+    font-size: 12px;
+    color: gray;
+    margin-top: 2px;
+}
+
+.separator {
+    border: none;
+    border-top: 1px solid #f0f0f0;
+    margin: 12px 0;
+}
+
+.lead-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.lead-address,
+.lead-job,
+.lead-job-id,
+.lead-price {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.lead-address i,
+.lead-job i,
+.lead-job-id span,
+.lead-price {
+    font-size: 16px;
+    color: #666;
+}
+
+.lead-contact {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+.lead-phone,
+.lead-email {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.lead-phone i,
+.lead-email i {
+    font-size: 16px;
+    color: #666;
+}
+
+.lead-description {
+    margin: 12px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.lead-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+    gap: 10px;
+}
+
+.accept-btn,
+.decline-btn {
+    padding: 10px 18px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.accept-btn {
+    background-color: #f57c00;
+    color: white;
+}
+
+.accept-btn:hover {
+    background-color: #e06900;
+}
+
+.decline-btn {
+    background-color: #fff;
+    border: 1px solid #f57c00;
+    color: #f57c00;
+}
+
+.decline-btn:hover {
+    background-color: #fff4e0;
+}
+
+.lead-price-right {
+    margin-left: auto;
+    font-size: 16px;
+    color: #666;
+    padding-left: 16px;
+}

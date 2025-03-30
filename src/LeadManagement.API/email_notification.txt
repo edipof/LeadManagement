@@ -1,0 +1,3 @@
+To: sales@test.com
+Subject: Lead Accepted
+Message: O lead 3 foi aceito.
